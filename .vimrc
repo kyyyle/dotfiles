@@ -6,6 +6,8 @@ set ttyfast                     " Indicates a fast terminal connection
 set backspace=indent,eol,start  " Allow backspaceing over autoindent, line breaks, starts of insert
 set shortmess+=I                " No welcome screen
 set shortmess+=A                " No .swp warning
+set backupcopy=yes              " So webpack watch consistently detects file changes
+
 
 " visual things
 set cursorline                  " configure cursor line
@@ -59,7 +61,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 
 " Syntastic: Code linting errors
-Plug 'scrooloose/syntastic', { 'for': ['php', 'python', 'javascript', 'css'] }
+Plug 'scrooloose/syntastic', { 'for': ['python', 'javascript', 'css'] }
 
 " Fuzzy file opener
 Plug 'ctrlpvim/ctrlp.vim'
@@ -87,6 +89,9 @@ Plug 'tpope/vim-fugitive'
 
 " JSX syntax highlighting
 Plug 'mxw/vim-jsx'
+
+" 'Vastly improved Javascript indentation and syntax support in Vim'
+Plug 'pangloss/vim-javascript'
 
 " Solarize color scheme
 Plug 'altercation/vim-colors-solarized'
@@ -160,4 +165,3 @@ nnoremap <left> <C-w>h
 nnoremap <right> <C-w>l
 nnoremap <up> <C-w>k
 nnoremap <down> <C-w>j
-
