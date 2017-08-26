@@ -21,9 +21,10 @@ alias themes="cd ~/projects/poly-repos/themes"
 alias log="tailf /var/log/fm/khuang.log"
 alias pl="tailf /var/log/fm/poly.log"
 alias prod="ssh ops.prod.pnw.hearsaylabs.com"
-alias restart="sudo service nginx restart;sudo service uwsgi restart"
+alias restart="sudo service nginx restart;sudo service uwsgi2 restart"
 alias src="source ~/.bashrc"
 alias rebase="git fetch upstream && git rebase upstream/master"
+alias fmtest="./run.sh manage.py test"
 
 # tmux
 alias dev="tmux a -t dev"
@@ -33,3 +34,4 @@ alias tmdev="tmux new -s dev"
 
 # git aliases
 alias gg='git grep'
+alias gs='git status'

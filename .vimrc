@@ -96,7 +96,23 @@ Plug 'pangloss/vim-javascript'
 " Solarize color scheme
 Plug 'altercation/vim-colors-solarized'
 
+" Plug 'mitermayer/vim-prettier', {
+"             \ 'do': 'npm install',
+"             \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
+"  
 call plug#end()
+
+" Prettier: Config
+" let g:prettier#config#print_width = 110
+" let g:prettier#config#tab_width = 4
+" let g:prettier#config#single_quote = 'true'
+" let g:prettier#config#trailing_comma = 'none'
+ 
+" Prettier: disable autoformat only files with @format
+" let g:prettier#autoformat = 0
+" Prettier: run prettier on files before writing out the vim buffer to files with these extensions
+" autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier
+
 
 
 " NeoBundle plugin installs
