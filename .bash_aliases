@@ -35,3 +35,9 @@ alias tmdev="tmux new -s dev"
 # git aliases
 alias gg='git grep'
 alias gs='git status'
+
+# local mac
+alias tdev="ssh -A -t khuang@khuang.dev.hearsaylabs.com \"tmux -CC attach-session -t dev\""
+alias sdev="ssh -A -t khuang@khuang.dev.hearsaylabs.com \"tmux a -t dev\""
+alias stest="ssh -A -t khuang@khuang.dev.hearsaylabs.com \"tmux a -t test\""
+alias ttest="ssh -A -t khuang@khuang.dev.hearsaylabs.com \"tmux -CC attach-session -t test\""

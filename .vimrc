@@ -13,6 +13,10 @@ set backupcopy=yes              " So webpack watch consistently detects file cha
 set cursorline                  " configure cursor line
 hi CursorLine cterm=NONE ctermbg=253
 "hi CursorLine cterm=NONE ctermbg=236
+set background&
+"set background=dark
+"colorscheme solarized
+
 set t_Co=256
 set number
 set ruler
@@ -47,10 +51,6 @@ set ttymouse=xterm2
 
 noremap Q <nop>
 
-set background&
-" set background=dark
-" colorscheme solarized
-
 
 
 " execute pathogen#infect()
@@ -79,6 +79,9 @@ Plug 'tpope/vim-repeat'
 
 " Fugitive: Git from within Vim
 Plug 'tpope/vim-fugitive'
+
+" Automatically detect indentation
+Plug 'tpope/vim-sleuth'
 
 " Only show CursorLine in current window
 " Plug 'CursorLineCurrentWindow'
