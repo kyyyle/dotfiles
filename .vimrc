@@ -10,12 +10,14 @@ set backupcopy=yes              " So webpack watch consistently detects file cha
 
 
 " visual things
+set termguicolors
 set cursorline                  " configure cursor line
 hi CursorLine cterm=NONE ctermbg=253
 "hi CursorLine cterm=NONE ctermbg=236
-set background&
+"set background&
 "set background=dark
-"colorscheme solarized
+set background=light
+" colorscheme monokai-soda
 
 set t_Co=256
 set number
@@ -25,6 +27,7 @@ if exists('+colorcolumn')
     set colorcolumn=+1        " Highlight the column after `textwidth`
 endif
 syntax enable
+set autoread
 
 
 " tabs
@@ -91,19 +94,38 @@ Plug 'tpope/vim-sleuth'
 "Plug 'pythonhelper'
 
 " JSX syntax highlighting
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 
 " 'Vastly improved Javascript indentation and syntax support in Vim'
 Plug 'pangloss/vim-javascript'
 
+" Syntax file and other settings for TypeScript.
+Plug 'leafgarland/typescript-vim'
+
+" Plug 'ianks/vim-tsx'
+" Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
+
+
+"Plug 'HerringtonDarkholme/yats.vim'
+
 " Solarize color scheme
 Plug 'altercation/vim-colors-solarized'
+
+" Monokai color scheme
+Plug 'sickill/vim-monokai'
+" Plug 'crusoexia/vim-monokai'
+Plug 'dunckr/vim-monokai-soda'
 
 " Plug 'mitermayer/vim-prettier', {
 "             \ 'do': 'npm install',
 "             \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
 "  
 call plug#end()
+
+" vim-jsx-pretty config
+let g:vim_jsx_pretty_enable_jsx_highlight = 1
+let g:vim_jsx_pretty_colorful_config = 1
 
 " Prettier: Config
 " let g:prettier#config#print_width = 110
@@ -117,10 +139,13 @@ call plug#end()
 " autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier
 
 
+" set filetypes as typescript.jsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+
 
 " NeoBundle plugin installs
 
-set runtimepath+=~/.vim/bundle/neobundle.vim/
+set runtimepath+=~/.vim/bundle/neobundle.vim/,~/.vim/bundle/typescript-vim/,~/.vim/bundle/yats.vim/
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -184,3 +209,10 @@ nnoremap <left> <C-w>h
 nnoremap <right> <C-w>l
 nnoremap <up> <C-w>k
 nnoremap <down> <C-w>j
+
+
+" Typescript autocomplete
+if !exists("g:ycm_semantic_triggers")
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']

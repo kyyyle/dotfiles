@@ -1,5 +1,3 @@
-export FM="~/projects/HearsayLabs/fanmgmt"
-
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 export IGNOREEOF=5
