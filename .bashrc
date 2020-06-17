@@ -3,8 +3,8 @@ export HISTCONTROL=erasedups
 export IGNOREEOF=5
 shopt -s histappend
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/dotfiles/.bash_aliases ]; then
+    . ~/dotfiles/.bash_aliases
 fi
 
 #if [ -e ~/.tmux-session-variables ]; then
