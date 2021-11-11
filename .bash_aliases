@@ -6,9 +6,9 @@
     #alias git='source ~/.screen/session-variables; git'
 #fi
 
-if [ -e ~/scratch.sh ]; then
-    alias screen='~/scratch.sh; screen'
-fi
+# if [ -e ~/scratch.sh ]; then
+#     alias screen='~/scratch.sh; screen'
+# fi
 
 alias vi="vim"
 alias ls="ls -alG"
@@ -25,3 +25,6 @@ alias tmdev="tmux new -s dev"
 # git aliases
 alias gg='git grep'
 alias gs='git status'
+
+# reset mac bluetooth to fix disconnections
+alias resetbt="sudo kill -9 `ps ax | grep 'coreaudiod' | grep -v grep | awk '{print $1}'`"
