@@ -1,7 +1,7 @@
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 export IGNOREEOF=5
-shopt -s histappend
+# shopt -s histappend
 
 if [ -f ~/dotfiles/.bash_aliases ]; then
     . ~/dotfiles/.bash_aliases
@@ -11,7 +11,7 @@ fi
     #alias ssh='source ~/.tmux-session-variables; ssh'
 #fi
 
-PS1='\[\033[01;32m\]\u@\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#PS1='\[\033[01;32m\]\u@\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 
 #if [ -e ~/.save_ssh.sh ]; then
@@ -58,3 +58,5 @@ fixssh2() {
 #if test -v "TMUX"; then
     #export $(tmux show-env | grep SSH_AUTH_SOCK)
 #fi
+
+export PATH=$PATH:/Users/kylehuang/android_sdk/platform-tools/

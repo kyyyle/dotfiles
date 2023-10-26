@@ -12,8 +12,7 @@ set backupcopy=yes              " So webpack watch consistently detects file cha
 " visual things
 set termguicolors
 set cursorline                  " configure cursor line
-hi CursorLine cterm=NONE ctermbg=253
-"hi CursorLine cterm=NONE ctermbg=236
+hi CursorLine cterm=NONE ctermbg=236
 "set background&
 "set background=dark
 set background=light
