@@ -16,7 +16,8 @@ hi CursorLine cterm=NONE ctermbg=236
 "set background&
 "set background=dark
 set background=light
-" colorscheme monokai-soda
+colorscheme codedark
+let g:airline_theme = 'codedark'
 
 set t_Co=256
 set number
@@ -54,6 +55,8 @@ set ttymouse=xterm2
 noremap Q <nop>
 
 
+" autoinstall plug
+" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 " execute pathogen#infect()
 
@@ -113,6 +116,8 @@ Plug 'altercation/vim-colors-solarized'
 
 " Monokai color scheme
 Plug 'sickill/vim-monokai'
+Plug 'jam1garner/vim-code-monokai'
+
 " Plug 'crusoexia/vim-monokai'
 Plug 'dunckr/vim-monokai-soda'
 
@@ -144,14 +149,14 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
 " NeoBundle plugin installs
 
-set runtimepath+=~/.vim/bundle/neobundle.vim/,~/.vim/bundle/typescript-vim/,~/.vim/bundle/yats.vim/
+" set runtimepath+=~/.vim/bundle/neobundle.vim/,~/.vim/bundle/typescript-vim/,~/.vim/bundle/yats.vim/
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+" call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+" NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
@@ -161,14 +166,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " doesn't work
 " NeoBundle 'miyakogi/conoline.vim'
 
-call neobundle#end()
+" call neobundle#end()
 
 " Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+" NeoBundleCheck
 
 
 " Conoline
